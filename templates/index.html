@@ -1,0 +1,51 @@
+{% extends "base.html" %}
+
+{% block title %}QuickNotes - Home{% endblock %}
+
+{% block content %}
+<div class="row justify-content-center">
+    <div class="col-md-8 text-center">
+        <div class="jumbotron mt-5">
+            <h1 class="display-4">Welcome to QuickNotes</h1>
+            <p class="lead">A simple and efficient way to organize your thoughts and ideas.</p>
+            <hr class="my-4">
+            <p>QuickNotes helps you keep track of your notes in one place. Sign up now to get started!</p>
+            <div class="mt-4">
+                {% if current_user.is_authenticated %}
+                    <a href="{{ url_for('dashboard') }}" class="btn btn-primary btn-lg">Go to Dashboard</a>
+                {% else %}
+                    <a href="{{ url_for('register') }}" class="btn btn-primary btn-lg me-2">Sign Up</a>
+                    <a href="{{ url_for('login') }}" class="btn btn-outline-primary btn-lg">Login</a>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row mt-5">
+    <div class="col-md-4">
+        <div class="card">
+            <div class="card-body text-center">
+                <h3 class="card-title">Easy to Use</h3>
+                <p class="card-text">Simple interface that makes note-taking a breeze.</p>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="card">
+            <div class="card-body text-center">
+                <h3 class="card-title">Secure</h3>
+                <p class="card-text">Your notes are private and secure with user authentication.</p>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="card">
+            <div class="card-body text-center">
+                <h3 class="card-title">Accessible</h3>
+                <p class="card-text">Access your notes from anywhere with an internet connection.</p>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
