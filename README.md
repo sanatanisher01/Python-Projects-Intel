@@ -1,6 +1,10 @@
 # QuickNotes
 
-A simple and efficient note-taking application built with Flask.
+A simple and efficient note-taking application built with Flask
+
+# Team
+  -@ayushagrawalgla
+  -@DevangMittal23
 
 ## Features
 
